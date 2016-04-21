@@ -1,7 +1,30 @@
-
-var eventToKeyboard = {'122':'z', '115':'s', '120':'x', '100':'d', '99':'c', '118':'v', '103':'g', '98':'b', 
-             '104':'h', '110':'n', '106':'j', '109':'m', '119':'w', '51':'3', '101':'e', '52':'4',
-             '114':'r', '116':'t', '54':'6', '121':'y', '55':'7', '117':'u', '56':'8', '105':'i', '111':'o'};
+var eventToKeyboard = {
+    '122':'z',
+    '115':'s',
+    '120':'x',
+    '100':'d',
+    '99': 'c',
+    '118':'v',
+    '103':'g',
+    '98': 'b', 
+    '104':'h',
+    '110':'n',
+    '106':'j',
+    '109':'m',
+    '119':'w',
+    '51': '3',
+    '101':'e',
+    '52': '4',
+    '114':'r',
+    '116':'t',
+    '54': '6',
+    '121':'y',
+    '55': '7',
+    '117':'u',
+    '56': '8',
+    '105':'i',
+    '111':'o',
+};
 
 
 var documentKeys = function(event) {
@@ -10,16 +33,11 @@ var documentKeys = function(event) {
     var keycode = event.which || event.keyCode; 
     var notePlayed = eventToKeyboard[keycode]; 
 
-
-
     switch (notePlayed) {
         case 'z':
-
         	document.getElementById('c1').load();
             document.getElementById('c1').play();
-
             break;
-
         case 's':
         	document.getElementById('cSharp1').load();
             document.getElementById('cSharp1').play();
@@ -63,8 +81,6 @@ var documentKeys = function(event) {
         	document.getElementById('b1').load();
             document.getElementById('b1').play();
             break;
-           
-
         case 'w':
         	document.getElementById('c2').load();
             document.getElementById('c2').play();
@@ -117,10 +133,8 @@ var documentKeys = function(event) {
         	document.getElementById('c3').load();
             document.getElementById('c3').play();
             break;
-
-
         default:
-            
+
     }
 };
 
