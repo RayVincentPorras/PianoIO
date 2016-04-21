@@ -1,4 +1,4 @@
-var eventToKeyboard = {
+var keyCodeToKey = {
     '122':'z',
     '115':'s',
     '120':'x',
@@ -30,10 +30,10 @@ var eventToKeyboard = {
 var documentKeys = function(event) {
     console.log(event.type, event.which, event.keyCode);
 
-    var keycode = event.which || event.keyCode; 
-    var notePlayed = eventToKeyboard[keycode]; 
-
-    switch (notePlayed) {
+    var keyCode = event.which || event.keyCode; 
+    var key = keyCodeToKey[keyCode]; 
+    
+    switch (key) {
         case 'z':
         	document.getElementById('c1').load();
             document.getElementById('c1').play();
