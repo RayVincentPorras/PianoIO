@@ -23,6 +23,22 @@
     font-size: 20px;
 }
 
+.bottom-left {
+    position: left;
+    max-width: 10%;
+    min-width: 5em;
+    max-height: 10%;
+    min-height: 2em;
+    padding: 3em 3em 3em 3em ;
+    background: #ffffff;
+    border-radius: 10px;
+    cursor: default;
+    opacity: 0.70;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-size: 20px;
+}
+
 #background {
     position: fixed;
     top: 50%;
