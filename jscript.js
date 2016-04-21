@@ -26,116 +26,43 @@ var keyCodeToKey = {
     '111':'o',
 };
 
+var keyToNote = {
+    'z':'c1',
+    's':'cSharp1',
+    'x':'d1',
+    'd':'dSharp1',
+    'c':'e1',
+    'v':'f1',
+    'g':'fSharp1',
+    'b':'g1',
+    'h':'gSharp1',
+    'n':'a1',
+    'j':'aSharp1',
+    'm':'b1',
+    'w':'c2',
+    '3':'cSharp2',
+    'e':'d2',
+    '4':'dSharp2',
+    'r':'e2',
+    't':'f2',
+    '6':'fSharp2',
+    'y':'g2',
+    '7':'gSharp2',
+    'u':'a2',
+    '8':'aSharp2',
+    'i':'b2',
+    'o':'c3',
+}
 
 var documentKeys = function(event) {
     console.log(event.type, event.which, event.keyCode);
 
     var keyCode = event.which || event.keyCode; 
     var key = keyCodeToKey[keyCode]; 
-    
-    switch (key) {
-        case 'z':
-        	document.getElementById('c1').load();
-            document.getElementById('c1').play();
-            break;
-        case 's':
-        	document.getElementById('cSharp1').load();
-            document.getElementById('cSharp1').play();
-            break;
-        case 'x':
-        	document.getElementById('d1').load();
-            document.getElementById('d1').play();
-            break;   
-        case 'd':
-        	document.getElementById('dSharp1').load();
-            document.getElementById('dSharp1').play();
-            break;     
-        case 'c':
-        	document.getElementById('e1').load();
-            document.getElementById('e1').play();
-            break;
-        case 'v':
-        	document.getElementById('f1').load();
-            document.getElementById('f1').play();
-            break;
-        case 'g':
-        	document.getElementById('fSharp1').load();
-        	document.getElementById('fSharp1').play();
-        case 'b':
-        	document.getElementById('g1').load();
-            document.getElementById('g1').play();
-            break;
-        case 'h':
-        	document.getElementById('gSharp1').load();
-            document.getElementById('gSharp1').play();
-            break;
-        case 'n':
-        	document.getElementById('a1').load();
-            document.getElementById('a1').play();
-            break;
-        case 'j':
-        	document.getElementById('aSharp1').load();
-            document.getElementById('aSharp1').play();
-            break;
-        case 'm':
-        	document.getElementById('b1').load();
-            document.getElementById('b1').play();
-            break;
-        case 'w':
-        	document.getElementById('c2').load();
-            document.getElementById('c2').play();
-            break;
-        case '3':
-        	document.getElementById('cSharp2').load();
-            document.getElementById('cSharp2').play();
-            break;            
-        case 'e':
-        	document.getElementById('d2').load();
-            document.getElementById('d2').play();
-            break;   
-        case '4':
-        	document.getElementById('dSharp2').load();
-            document.getElementById('dSharp2').play();
-            break;                
-        case 'r':
-        	document.getElementById('e2').load();
-            document.getElementById('e2').play();
-            break;
-        case 't':
-        	document.getElementById('f2').load();
-            document.getElementById('f2').play();
-            break;
-        case '6':
-        	document.getElementById('fSharp2').load();
-            document.getElementById('fSharp2').play();
-            break;            
-        case 'y':
-        	document.getElementById('g2').load();
-            document.getElementById('g2').play();
-            break;
-        case '7':
-        	document.getElementById('gSharp2').load();
-            document.getElementById('gSharp2').play();
-            break;            
-        case 'u':
-        	document.getElementById('a2').load();
-            document.getElementById('a2').play();
-            break;
-        case '8':
-        	document.getElementById('aSharp2').load();
-            document.getElementById('aSharp2').play();
-            break;            
-        case 'i':
-        	document.getElementById('b2').load();
-            document.getElementById('b2').play();
-            break;
-        case 'o':
-        	document.getElementById('c3').load();
-            document.getElementById('c3').play();
-            break;
-        default:
+    var note = keyToNote[key];
 
-    }
+    document.getElementById(note).load();
+    document.getElementById(note).play();
 };
 
 $(document).on('keydown keyup keypress', documentKeys);
