@@ -2,8 +2,22 @@
 @import url(font-awesome.min.css);
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
 
-body{
+.body{
     font-family: Source Sans Pro;
+}
+
+.center {
+        margin: auto;
+        position: relative;
+        max-width: 20%;
+        min-width: 27em;
+        padding: 3em 3em 3em 3em ;
+        background: #ffffff;
+        border-radius: 10px;
+        cursor: default;
+        opacity: 0.70;
+        text-align: center;
+        font-family: Source Sans Pro;
 }
 
 #background {
@@ -20,6 +34,7 @@ body{
     background: url(polina.jpg) no-repeat;
     background-size: cover;
 }
+
 .container h1 {
     color: white;
 }
