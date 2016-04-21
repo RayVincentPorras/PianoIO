@@ -57,12 +57,17 @@ var keyToNote = {
 var documentKeys = function(event) {
     console.log(event.type, event.which, event.keyCode);
 
-    var keyCode = event.which || event.keyCode; 
-    var key = keyCodeToKey[keyCode]; 
+    var keyCode = event.which || event.keyCode;
+    var key = keyCodeToKey[keyCode + 32]; // it seems that keyup / keydown have values 32 below keypress, which it looks like the keycodes were based on
+    if (!key) {
+        console.log('Key ' + key + ' does not correspond to a note.')
+    }
     var note = keyToNote[key];
 
-    document.getElementById(note).load();
-    document.getElementById(note).play();
+    if (note) {
+        document.getElementById(note).load();
+        document.getElementById(note).play();
+    }
 };
 
-$(document).on('keydown keyup keypress', documentKeys);
+$(document).on('keydown keyup', documentKeys);
