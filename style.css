@@ -10,7 +10,9 @@
         margin: auto;
         position: relative;
         max-width: 20%;
-        min-width: 27em;
+        min-width: 10em;
+        max-height: 20%;
+        min-height: 17em;
         padding: 3em 3em 3em 3em ;
         background: #ffffff;
         border-radius: 10px;
@@ -37,4 +39,9 @@
 
 .container h1 {
     color: white;
+}
+
+.padding{
+
+    padding-top: 4cm;
 }
