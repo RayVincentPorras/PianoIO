@@ -26,6 +26,8 @@ var keyCodeToKey = {
     '111':'o',
 };
 
+
+
 var keyToNote = {
     'z':'c1',
     's':'cSharp1',
@@ -58,7 +60,7 @@ var playingNotes = {}
 
 var findNoteFromEvent = function(event) {
     var keyCode = event.which || event.keyCode;
-    var key = keyCodeToKey[keyCode + 32]; // it seems that keyup / keydown have values 32 below keypress, which it looks like the keycodes were based on
+    var key = keyCodeToKey[keyCode + 32] || keyCodeToKey[keyCode]; // it seems that keyup / keydown have values 32 below keypress, which it looks like the keycodes were based on
     if (!key) {
         console.log('Key ' + key + ' does not correspond to a note.');
         return null;
