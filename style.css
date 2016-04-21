@@ -17,23 +17,25 @@
     background: #ffffff;
     border-radius: 10px;
     cursor: default;
-    opacity: 0.70;
+    opacity: 0.95;
     text-align: center;
     font-family: Source Sans Pro;
     font-size: 20px;
 }
 
 .bottom-left {
-    position: left;
+    position: fixed;
+    left: 70%;
+    bottom: 0;
     max-width: 10%;
     min-width: 5em;
     max-height: 10%;
     min-height: 2em;
-    padding: 3em 3em 3em 3em ;
+    padding: 2em 2em 2em 2em ;
     background: #ffffff;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: default;
-    opacity: 0.70;
+    opacity: 0.80;
     text-align: center;
     font-family: Source Sans Pro;
     font-size: 20px;
@@ -50,7 +52,7 @@
     z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(polina.jpg) no-repeat;
+    background: images/background.jpe no-repeat;
     background-size: cover;
 }
 
