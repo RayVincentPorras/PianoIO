@@ -62,11 +62,14 @@ var documentKeys = function(event) {
     if (!key) {
         console.log('Key ' + key + ' does not correspond to a note.')
     }
-    var note = keyToNote[key];
 
+    var note = keyToNote[key];
     if (note) {
-        document.getElementById(note).load();
-        document.getElementById(note).play();
+        var noteElement = $('#' + note)[0];
+        if (noteElement) {
+            noteElement.load();
+            noteElement.play();
+        }
     }
 };
 
