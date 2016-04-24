@@ -27,7 +27,6 @@ var keyCodeToKey = {
 };
 
 
-
 var keyToNote = {
     'z':'c1',
     's':'cSharp1',
@@ -68,6 +67,8 @@ var findNoteFromEvent = function(event) {
     return keyToNote[key];
 }
 
+
+
 $(document).on('keydown', function(event) {
     var note = findNoteFromEvent(event);
     if (note && !playingNotes[note]) {
@@ -78,6 +79,8 @@ $(document).on('keydown', function(event) {
         }
     }
 });
+
+
 
 $(document).on('keyup', function(event) {
     var note = findNoteFromEvent(event);
