@@ -55,6 +55,32 @@ var keyToNote = {
     'o':'c3',
 }
 
+var c1 = new Audio("piano/c1.wav");
+var cSharp1 = new Audio("piano/cSharp1.wav");
+var d1 = new Audio("piano/d1.wav");
+var dSharp1 = new Audio("piano/dSharp1.wav");
+var e1 = new Audio("piano/e1.wav");
+var f1 = new Audio("piano/f1.wav");
+var fSharp1 = new Audio("piano/fSharp1.wav");
+var g1 = new Audio("piano/g1.wav");
+var gSharp1 = new Audio("piano/gSharp1.wav");
+var a1 = new Audio("piano/a1.wav");
+var aSharp1 = new Audio("piano/aSharp1.wav");
+var b1 = new Audio("piano/b1.wav");
+var c2 = new Audio("piano/c2.wav");
+var cSharp2 = new Audio("piano/cSharp2.wav");
+var d2 = new Audio("piano/d2.wav");
+var dSharp2 = new Audio("piano/dSharp2.wav");
+var e2 = new Audio("piano/e2.wav");
+var f2 = new Audio("piano/f2.wav");
+var fSharp2 = new Audio("piano/fSharp2.wav");
+var g2 = new Audio("piano/g2.wav");
+var gSharp2 = new Audio("piano/gSharp2.wav");
+var a2 = new Audio("piano/a2.wav");
+var aSharp2 = new Audio("piano/aSharp2.wav");
+var b2 = new Audio("piano/b2.wav");
+var c3 = new Audio("piano/c3.wav");
+
 var playingNotes = {}
 
 var findNoteFromEvent = function(event) {
