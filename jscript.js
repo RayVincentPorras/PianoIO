@@ -81,6 +81,39 @@ var aSharp2 = new Audio("piano/aSharp2.wav");
 var b2 = new Audio("piano/b2.wav");
 var c3 = new Audio("piano/c3.wav");
 
+var c1Sustained = new Audio("piano/Sustained/c1.wav");
+var cSharp1Sustained = new Audio("piano/Sustained/cSharp1.wav");
+var d1Sustained = new Audio("piano/Sustained/d1.wav");
+var dSharp1Sustained = new Audio("piano/Sustained/dSharp1.wav");
+var e1Sustained = new Audio("piano/Sustained/e1.wav");
+var f1Sustained = new Audio("piano/Sustained/f1.wav");
+var fSharp1Sustained = new Audio("piano/Sustained/fSharp1.wav");
+var g1Sustained = new Audio("piano/Sustained/g1.wav");
+var gSharp1Sustained = new Audio("piano/Sustained/gSharp1.wav");
+var a1Sustained = new Audio("piano/Sustained/a1.wav");
+var aSharp1Sustained = new Audio("piano/Sustained/aSharp1.wav");
+var b1Sustained = new Audio("piano/Sustained/b1.wav");
+var c2Sustained = new Audio("piano/Sustained/c2.wav");
+var cSharp2Sustained = new Audio("piano/Sustained/cSharp2.wav");
+var d2Sustained = new Audio("piano/Sustained/d2.wav");
+var dSharp2Sustained = new Audio("piano/Sustained/dSharp2.wav");
+var e2Sustained = new Audio("piano/Sustained/e2.wav");
+var f2Sustained = new Audio("piano/Sustained/f2.wav");
+var fSharp2Sustained = new Audio("piano/Sustained/fSharp2.wav");
+var g2Sustained = new Audio("piano/Sustained/g2.wav");
+var gSharp2Sustained = new Audio("piano/Sustained/gSharp2.wav");
+var a2Sustained = new Audio("piano/Sustained/a2.wav");
+var aSharp2Sustained = new Audio("piano/Sustained/aSharp2.wav");
+var b2Sustained = new Audio("piano/Sustained/b2.wav");
+var c3Sustained = new Audio("piano/Sustained/c3.wav");
+
+
+var sustain = false;
+
+function toggleSustainStatus(){
+    sustain = !sustain;
+}
+
 var playingNotes = {}
 
 var findNoteFromEvent = function(event) {
@@ -94,13 +127,17 @@ var findNoteFromEvent = function(event) {
 }
 
 
-
 $(document).on('keydown', function(event) {
+
     var note = findNoteFromEvent(event);
     if (note && !playingNotes[note]) {
         playingNotes[note] = true;
         var noteAudio = new Audio('piano/' + note + '.wav');
-        if (noteAudio) {
+        var noteAudioSustained = new Audio('piano/Sustained/' + note + '.wav');
+
+        if (noteAudio && sustain == true) {
+            noteAudioSustained.play();
+        } else{
             noteAudio.play();
         }
     }
