@@ -22,19 +22,7 @@ div#load_screen > div#loading{
 }
 
 .body{
-    font-family: Source Sans Pro;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    display: -moz-box;
-    -moz-box-orient: center;
+
     background: url("images/background.jpeg") no-repeat;
     background-size: cover;
 }
@@ -55,6 +43,7 @@ div#load_screen > div#loading{
     font-family: Source Sans Pro;
     font-size: 20px;
 }
+
 
 
 .padding{

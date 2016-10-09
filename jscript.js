@@ -115,7 +115,7 @@ var c3Sustained = new Audio("piano/Sustained/c3.wav");
 
 var sustain = false;
 
-function twavleSustainStatus(){
+function toggleSustainStatus(){
     sustain = !sustain;
 }
 
