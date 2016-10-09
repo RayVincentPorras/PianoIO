@@ -9,7 +9,7 @@
 .center {
     margin: auto;
     position: relative;
-    max-width: 20%;
+    max-width: 35%;
     min-width: 10em;
     max-height: 15%;
     min-height: 17em;
@@ -17,7 +17,7 @@
     background: #ffffff;
     border-radius: 10px;
     cursor: default;
-    opacity: 0.95;
+    opacity: 0.85;
     text-align: center;
     font-family: Source Sans Pro;
     font-size: 20px;
@@ -44,6 +44,7 @@
 
     padding-top: 4cm;
 }
+
 
 
 
