@@ -1,3 +1,8 @@
+window.addEventListener("load", function(){
+    var load_screen = document.getElementById("load_screen");
+    document.body.removeChild(load_screen);
+});
+
 var keyCodeToKey = {
     '122':'z',
     '115':'s',
@@ -149,5 +154,6 @@ $(document).on('keyup', function(event) {
     var note = findNoteFromEvent(event);
     delete playingNotes[note];
 });
+
 
 
